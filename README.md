@@ -1,30 +1,36 @@
 ## Challenge-03
 
 ### Scenario
-* Similar scenario like challenge-01 (You are given a requirement to enhance a service)
-* However, you will start seeing benefits of DevSpaces (Extensions + Tooling)
+* Lets continue to enhance the ds-challenge-02
+* So far we have done consistent way of creating tooling and extensions. Let's take a step further by enhancing this to create consistent way to build, package, run the programs and also creating standardized end points
 
 ### Set Up + verification
-* After DevSpaces initialization, check the extensions. You will see under "DevSpaces.apps.cluster" the extension "Language Support for Java(TM) by Red Hat" is already installed. This is done via the ".vscode/extensions.json" file
-* Tools that are requires for development are already present : Type "oc --help", "jq --help" etc... This is possible because of the ds-challenge-02/devfile.yaml "tools" container (line#07)
-* With tools and the extensions already part of the source code, your job becomes much easier to just start coding
+* So, we have our extension "Language Support for Java(TM) by Red Hat" and tools that are required for development are already present : Type "oc --help", "jq --help" etc are already installed
 * Open a terminal. Run the command "chmod 755 mvnw" to change the mvnw file to be executable
-* Run the quarkus application in live coding mode with the command : "./mvnw quarkus:dev"
-* Select your option "y/n" to the question (if asked) : Do you agree to contribute anonymous build time data to the Quarkus community? 
-* Open another terminal and invoke "curl localhost:8080/api/greet/bengaluru". You will see empty result
-* Openthe "src/main/java/org/acme/GreetingResource.java". You will observe the method "greetUser" needs to be fixed.
+* It's time to create standardized commands. You will create two commands
+    * Create 1st command with name (Compile and Package) inside devfile to execute "./mvnw compile package"
+    * Create 2nd command with name (Live Coding) inside devfile to execute "./mvwn quarkus:dev"
+    * Leverage the Resources section and find how you can create commands in devfile.yaml    
+* Creating Endpoints
+    * The "src/main/java/org/acme/GreetingResource.java" has endpoints : localhost:8080, localhost:8080/api/hello and localhost:8080/api/greet/#input
+    * You are required to expose localhost:8080 and localhost:8080/api/hello endpoints
+    * Leverage the Resources section and find how you can create endpoints in devfile.yaml    
+* Once you complete the above, open the terminal and run the quarkus application in live coding mode with commands you created in devfile. 
+* Select your option "y/n" to the question (if asked) : Do you agree to contribute anonymous build time data to the Quarkus community?
 
 ### Success Criteria
-* 
-* 
-* 
+* Commands are created and can be invoked via the "Hanburger Icon --> Terminal --> Run Tasks --> Devfile --> Select #Commands"
+* Endpoints (shown in the bottom left corner of the IDE) can be invoked
+* Invoking localhost:8080 displays an index.html showing "Developer Flow"
+* Invoking localhost:8080/api/hello displays a response "Hello Challenge Attendees"
 
 ### Resources
+* https://devfile.io/docs/2.2.2/adding-commands
 * https://devfile.io/docs/2.1.0/defining-endpoints
 * https://devfile.io/docs/2.1.0/devfile-schema
 
 ### What did we learn
-* 
-* 
-* 
+* In addition to the extensions and tooling, now we have consitent endpoints and commands. This makes iterative development faster (no more typing commands and or finding endpoints via code)
+* The next developer will know exactly how things are done making it a much better experience
+* One of the core functions of development is to debug code. In the next challenge, we will explore debugging inside DevSpaces
 
