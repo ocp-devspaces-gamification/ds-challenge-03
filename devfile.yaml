@@ -25,4 +25,6 @@ components:
 #TODO : Add two commands
 commands:
   - id: 1-package
+    exec:
   - id: 2-startdev
+      exec:
