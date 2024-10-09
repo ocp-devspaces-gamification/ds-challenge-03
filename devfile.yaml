@@ -14,7 +14,7 @@ components:
           protocol: tcp
           targetPort: 5005
         #TODO : Include two endpoints
-        
+
       volumeMounts:
         - name: m2
           path: /home/user/.m2
@@ -23,3 +23,6 @@ components:
     volume:
       size: 1G
 #TODO : Add two commands
+commands:
+  - id: 1-package
+  - id: 2-startdev

@@ -8,9 +8,10 @@
 * So, we have our extension "Language Support for Java(TM) by Red Hat" and tools that are required for development are already present : Type "oc --help", "jq --help" etc are already installed
 * Open a terminal. Run the command "chmod 755 mvnw" to change the mvnw file to be executable
 * It's time to create standardized commands. You will create two commands
-    * Create 1st command with name (Compile and Package) inside devfile to execute "./mvnw compile package"
-    * Create 2nd command with name (Live Coding) inside devfile to execute "./mvwn quarkus:dev"
-    * Leverage the Resources section and find how you can create commands in devfile.yaml    
+    * Create 1st command with id "1-package" and label (Compile and Package) inside devfile to execute "./mvnw compile package"
+    * Create 2nd command with id "2-startdev" and lable (Live Coding) inside devfile to execute "./mvwn quarkus:dev"
+    * Leverage the Resources section and find how you can create commands in devfile.yaml
+    * To see changes, you will have to restart the workspace
 * Creating Endpoints
     * The "src/main/java/org/acme/GreetingResource.java" has endpoints : localhost:8080, localhost:8080/api/hello and localhost:8080/api/greet/#input
     * You are required to expose localhost:8080 and localhost:8080/api/hello endpoints
