@@ -14,7 +14,6 @@ components:
           protocol: tcp
           targetPort: 5005
         #TODO : Include two endpoints
-
       volumeMounts:
         - name: m2
           path: /home/user/.m2
@@ -26,5 +25,19 @@ components:
 commands:
   - id: 1-package
     exec:
+      label: "1. Package the application"
+      component: tools
+      workingDir: ${PROJECTS_ROOT}/ds-challenge-03
+      commandLine: "mvn package"
+      group:
+        kind: build
+        isDefault: true
   - id: 2-startdev
-      exec:
+    exec:
+      label: "2. Start Development mode (Hot reload + debug)"
+      component: tools
+      workingDir: ${PROJECTS_ROOT}/ds-challenge-03
+      commandLine: "mvn compile quarkus:dev"
+      group:
+        kind: run
+        isDefault: true
