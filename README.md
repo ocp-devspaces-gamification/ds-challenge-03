@@ -35,8 +35,8 @@
 
 ### Resources
 * https://devfile.io/docs/2.2.2/adding-commands
-* https://devfile.io/docs/2.1.0/defining-endpoints
-* https://devfile.io/docs/2.1.0/devfile-schema
+* https://devfile.io/docs/2.2.2/defining-endpoints
+* https://devfile.io/docs/2.2.2/devfile-schema
 
 ### What did we learn
 * In addition to the extensions and tooling, now we have consitent endpoints and commands. This makes iterative development faster (no more typing commands and or finding endpoints via code)
