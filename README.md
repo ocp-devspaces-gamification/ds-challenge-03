@@ -41,5 +41,5 @@
 ### What did we learn
 * In addition to the extensions and tooling, now we have consitent endpoints and commands. This makes iterative development faster (no more typing commands and or finding endpoints via code)
 * The next developer will know exactly how things are done making it a much better experience
-* One of the core functions of development is to debug code. In the next challenge, we will explore debugging inside DevSpaces
+* One of the core functions of development is to Test & Debug code. In the next challenge, we will explore debugging inside DevSpaces
 
