@@ -7,8 +7,8 @@
 ### Set Up + verification
 * Reminder : You should have created this workspace from your teams challenges folder in source control
 * It's time to create standardized commands. You will create two commands in devfile.yaml
-    * Create 1st command with id "1-package" and label (1. Package the application) inside devfile to execute "mvn package"
-    * Create 2nd command with id "2-startdev" and lable (2. Start Development mode) inside devfile to execute "mvw compile quarkus:dev"
+    * Create 1st command with id "package" and label (1. Package the application) inside devfile to execute "mvn package"
+    * Create 2nd command with id "livecoding" and lable (2. Start Development mode) inside devfile to execute "mvw compile quarkus:dev"
     * Leverage the Resources section and find how you can create commands in devfile.yaml
 * Creating Two Endpoints
     * The "src/main/java/org/acme/GreetingResource.java" has restful endpoints : 
