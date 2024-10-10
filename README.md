@@ -5,7 +5,6 @@
 * So far we have done consistent way of creating tooling and extensions. Let's take a step further by enhancing this to create consistent way to build, package, run the programs and also creating standardized end points
 
 ### Set Up + verification
-* Reminder : You should have created this workspace from your teams challenges folder in source control
 * It's time to create standardized commands. You will create two commands in devfile.yaml
     * Create 1st command with id "package" and label (1. Package the application) inside devfile to execute "mvn package"
     * Create 2nd command with id "livecoding" and lable (2. Start Development mode) inside devfile to execute "mvw compile quarkus:dev"
@@ -38,8 +37,10 @@
 * https://devfile.io/docs/2.2.2/defining-endpoints
 * https://devfile.io/docs/2.2.2/devfile-schema
 
-### What did we learn
-* In addition to the extensions and tooling, now we have consitent endpoints and commands. This makes iterative development faster (no more typing commands and or finding endpoints via code)
+### What did we learn?
+* OpenShift DevSpaces reduces the Developers pain points. As a Developer, your life is getting simpler with the below
+    * Automatic Extensions (Language Support for Java(TM) by Red Hat) inclusion
+* Now we have consitent endpoints and commands. This makes iterative development faster (no more typing commands and or finding endpoints via code)
 * The next developer will know exactly how things are done making it a much better experience
 * One of the core functions of development is to Test & Debug code. In the next challenge, we will explore debugging inside DevSpaces
 
