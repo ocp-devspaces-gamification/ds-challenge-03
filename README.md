@@ -24,6 +24,8 @@
     * Create 2nd endpoint for the root "/" [with name=base-challenge]
     * Leverage the Resources section and find how you can create endpoints
 * Once you complete the above, reload the devspaces [Click the Arrows symbol(><) in the Bottom Left corner to open a new menu] with option "Restart with local Dev file"
+![ ](docs/images/challenge03.reload.jpg)
+
 * In devspaces, Open a terminal. Run the below command to change the mvnw file to be executable
   ```bash
   chmod 755 mvnw
@@ -38,7 +40,9 @@
 * Commands are created and can be invoked via the "Hamburger Icon --> Terminal --> Run Task --> Devfile --> Select #Commands"
 * Endpoints (shown in the bottom left corner of the IDE) can be invoked when live coding is ON
 * Invoking "base-challenge" endpoint displays an image of the "Developer Flow"
-* Invoking below service endpoint displays a response "Hello Challenge Attendees"
+![ ](docs/images/challenge03.endpoint.jpg)
+
+* Invoking "greet-attendee" endpoint (or executing below command in the terminal) displays a response "Hello Challenge Attendees"
     ```bash
     curl localhost:8080/api/hello
     ```
