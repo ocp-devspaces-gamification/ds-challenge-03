@@ -6,8 +6,14 @@
 
 ### Set Up + verification
 * It's time to create standardized commands. You will create two commands in devfile.yaml
-    * Create 1st command with id "package" and label (1. Package the application) inside devfile to execute "./mvnw package"
-    * Create 2nd command with id "livecoding" and lable (2. Start Development mode) inside devfile to execute "./mvnw compile quarkus:dev"
+    * Create 1st command with id "package" and label (1. Package the application) inside devfile to execute below command
+      ```bash
+      ./mvnw package
+      ```
+    * Create 2nd command with id "livecoding" and lable (2. Start Development mode) inside devfile to execute below command
+      ```bash
+      ./mvnw compile quarkus:dev
+      ```
     * Leverage the Resources section and find how you can create commands in devfile.yaml
 * Creating Two Endpoints in "tools" container of the devfile
     * The "src/main/java/org/acme/GreetingResource.java" has restful endpoints : 
@@ -19,9 +25,9 @@
     * Leverage the Resources section and find how you can create endpoints
 * Once you complete the above, reload the devspaces [Click the Arrows symbol(><) in the Bottom Left corner to open a new menu] with option "Restart with local Dev file"
 * In devspaces, Open a terminal. Run the below command to change the mvnw file to be executable
-    ```bash
-    chmod 755 mvnw
-    ```
+  ```bash
+  chmod 755 mvnw
+  ```
 * Run the command "1. Package the application" first. See success criteria on how to run the command
 * Run the quarkus application using command "2. Start Development mode" you created in devfile. 
 * Select your option "y/n" to the question (if asked) : Do you agree to contribute anonymous build time data to the Quarkus community?
