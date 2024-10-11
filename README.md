@@ -18,7 +18,10 @@
     * Create 2nd endpoint for the root "/" [with name=base-challenge]
     * Leverage the Resources section and find how you can create endpoints
 * Once you complete the above, reload the devspaces [Click the Arrows symbol(><) in the Bottom Left corner to open a new menu] with option "Restart with local Dev file"
-* In devspaces, Open a terminal. Run the command "chmod 755 mvnw" to change the mvnw file to be executable
+* In devspaces, Open a terminal. Run the below command to change the mvnw file to be executable
+    ```bash
+    chmod 755 mvnw
+    ```
 * Run the command "1. Package the application" first. See success criteria on how to run the command
 * Run the quarkus application using command "2. Start Development mode" you created in devfile. 
 * Select your option "y/n" to the question (if asked) : Do you agree to contribute anonymous build time data to the Quarkus community?
@@ -28,8 +31,11 @@
 ### Success Criteria
 * Commands are created and can be invoked via the "Hamburger Icon --> Terminal --> Run Task --> Devfile --> Select #Commands"
 * Endpoints (shown in the bottom left corner of the IDE) can be invoked when live coding is ON
-* Invoking localhost:8080 displays an image of the "Developer Flow"
-* Invoking localhost:8080/api/hello displays a response "Hello Challenge Attendees"
+* Invoking "base-challenge" endpoint displays an image of the "Developer Flow"
+* Invoking below service endpoint displays a response "Hello Challenge Attendees"
+    ```bash
+    curl localhost:8080/api/hello
+    ```
 
 ### Resources
 * https://devfile.io/docs/2.2.2/adding-commands
