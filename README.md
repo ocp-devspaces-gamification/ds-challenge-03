@@ -23,7 +23,7 @@
     * Create 1st endpoint for "/api/hello" [with name="greet-attendee"]
     * Create 2nd endpoint for the root "/" [with name=base-challenge]
     * Leverage the Resources section and find how you can create endpoints
-* Once you complete the above, reload the devspaces [Click the Arrows symbol(><) in the Bottom Left corner to open a new menu] with option "Restart with local Dev file"
+* Once you complete the above, reload the devspaces [Click the Arrows symbol(><) in the Bottom Left corner to open a new menu] with option "Restart Workspace from Local Devfile".
 ![ ](docs/images/challenge03.reload.jpg)
 
 * In devspaces, Open a terminal. Run the below command to change the mvnw file to be executable
